@@ -132,6 +132,10 @@ header h1{
   background: linear-gradient(to bottom, #4682B4, #7fcce5);
 }
 
+.cold-weather{
+  background: linear-gradient(to bottom, #062742, #026484);
+}
+
 .bad-weather{
-  background: linear-gradient(to bottom, #062742, #0278a0);
+  background: linear-gradient(to bottom, #3C596C, #32597E);
 }
