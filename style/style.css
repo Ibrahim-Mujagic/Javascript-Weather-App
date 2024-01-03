@@ -1,0 +1,137 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: 'Kanit', sans-serif;
+}
+
+
+header{
+  height: 100px;
+  text-align: center;
+  line-height: 90px;
+  color: #fff;
+  text-shadow: 0px 0px 10px rgba(255, 255, 255, .5);
+}
+
+header h1{
+  opacity: .8;
+}
+
+.container-general{
+  height: calc(100vh - 100px);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.weather-card{
+  width: 450px;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, .2);
+  box-shadow: 0px 0px 20px rgba(255, 255, 255, .5);
+
+}
+
+.weather-card .search-container{
+  width: 100%;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.weather-card .search-container input{
+  min-width: 65%;
+  padding: 11px;
+  border-radius: 30px;
+  border: none;
+  box-shadow: 0px 0px 4px gainsboro;
+}
+
+.weather-card .search-container button{
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
+  background-color: #fff;
+  border: none;
+  box-shadow: 0px 0px 4px gainsboro;
+  cursor: pointer;
+}
+
+.weather-card .search-container button:active{
+  background-color: #b8b5b5;
+}
+
+.weather-card .main-card{
+  padding: 10px 15px;
+  height: 0px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.open-main{
+  animation: openMain 1s forwards;
+}
+
+@keyframes openMain {
+  100% {
+    height: 500px;
+  }
+}
+
+.weather-card .cont-icon-and-temperature{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+
+.weather-card .cont-icon-and-temperature img{
+  width: 100%;
+  max-width: 300px;
+}
+
+.weather-card .cont-icon-and-temperature .temperature-city h2,p{
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bolder;
+}
+
+.humidity-wind {
+  display: flex;
+  justify-content: space-between;
+  color: #fff;
+}
+.humidity-wind i{
+  font-size: 1.8rem;
+}
+
+.humidity-wind p{
+  font-size: 1.1rem;
+  font-weight: 200;
+}
+
+.humidity-wind .humidity-percentage,.wind-speed{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.good-weather{
+  background: linear-gradient(to bottom, #4682B4, #7fcce5);
+}
+
+.bad-weather{
+  background: linear-gradient(to bottom, #062742, #0278a0);
+}
