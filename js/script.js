@@ -18,10 +18,14 @@ async function init(){
     return
   }
 
-  const paramPlace = await getLocation(API_KEY,userPlace);
-  const weatherData = await getWeather(paramPlace.lat,paramPlace.lon,API_KEY);
-
-  innerDataToHtml(weatherData);
+  try{
+    const paramPlace = await getLocation(API_KEY,userPlace);
+    const weatherData = await getWeather(paramPlace.lat,paramPlace.lon,API_KEY);
+    innerDataToHtml(weatherData);
+  }catch(error){
+    console.error('Error:',error);
+    alert('Si è verificato un errore, riprova più tardi');
+  }
 }
 
 function innerDataToHtml(weatherData){
